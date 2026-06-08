@@ -69,7 +69,7 @@ const Resume = () => {
             if (localResumeUrl) URL.revokeObjectURL(localResumeUrl);
             if (localImageUrl) URL.revokeObjectURL(localImageUrl);
         };
-    }, [id, kv, fs, isLoading]); // Added missing dependencies
+    }, [id, kv, fs, isLoading]);
 
     if (isLoading) {
         return <div className="flex h-screen items-center justify-center">Loading resume details...</div>;
@@ -85,7 +85,7 @@ const Resume = () => {
             </nav>
 
             <div className="flex flex-row w-full max-lg:flex-col-reverse">
-                {/* Fixed Tailwind background syntax utility */}
+
                 <section className="feedback-section bg-[url('/images/bg-small.svg')] bg-cover h-[100vh] sticky top-0 flex items-center justify-center w-full">
                     {imageUrl && resumeUrl ? (
                         <div className="animate-in fade-in duration-1000 gradient-border max-sm:m-0 h-[90%] max-w-xl:h-fit w-fit">
